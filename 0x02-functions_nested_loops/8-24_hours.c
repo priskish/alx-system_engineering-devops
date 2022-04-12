@@ -47,6 +47,3 @@ while (h2 <= 2)
 }
 
 }
-
-
-9-times_table.c
