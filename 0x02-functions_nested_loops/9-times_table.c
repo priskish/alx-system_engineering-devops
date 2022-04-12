@@ -1,44 +1,46 @@
 #include "main.h"
+
 /**
- * add - returns the sum of its parameters
- * @a: int type number
- * @b: int type number
- * Return:0
+ * times_table - prints times table
+ * Return:void
  */
 
-
-int add(int a, int b)
+void times_table(void)
 {
-return (a + b);
+
+int a = 0;
+int b;
+int rep;
+while (a <= 9)
+{
+	b = 0;
+	while (b <= 9)
+	{
+		rep = a * b;
+		if (b == 0)
+		{
+			_putchar('0' + rep);
+		}
+		else if (rep < 10)
+		{
+			_putchar(' ');
+			_putchar('0' + rep);
+		}
+		else
+		{
+			_putchar('0' + rep / 10);
+			_putchar('0' + rep % 10);
+		}
+
+		if (b < 9)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
+		b++;
+	}
+	_putchar('\n');
+	a++;
 }
 
-
-11-print_to_98.c
-
-Ans:
-
-#include "main.h"
-#include <stdio.h>
-/**
- * print_to_98 - print to 98
- * @n : number to start from
- * Return:0 or 1
- */
-
-void print_to_98(int n)
-{
-
-while (n < 98)
-{
-	printf("%i, ", n);
-	n++;
-}
-while (n > 98)
-{
-	printf("%i, ", n);
-	n--;
-}
-
-printf("98");
-putchar('\n');
 }
